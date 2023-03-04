@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import './App.css';
 import {CallsBlock} from "../components/CallsBlock";
 import Box from "@mui/material/Box";
 import {Header} from "../components/Header";

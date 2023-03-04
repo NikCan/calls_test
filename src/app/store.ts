@@ -1,11 +1,9 @@
-import {configureStore, ThunkAction, Action} from '@reduxjs/toolkit';
+import {Action, configureStore, ThunkAction} from '@reduxjs/toolkit';
 import {callsAPI} from "../features/calls/callsAPI";
-import {callsReducer} from "../features/calls/calls-slice";
 
 
 export const store = configureStore({
   reducer: {
-    calls: callsReducer,
     [callsAPI.reducerPath]: callsAPI.reducer,
   },
   middleware: getDefaultMiddleware =>

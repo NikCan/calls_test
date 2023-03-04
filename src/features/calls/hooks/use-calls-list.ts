@@ -1,6 +1,6 @@
 import {ListType, useGetListMutation} from "../callsAPI";
 import {useEffect} from "react";
-import {useSearch} from "./useSearch";
+import {useSearch} from "./use-search";
 
 export const useCallsList = () => {
   const [getList, {data, isLoading}] = useGetListMutation()

@@ -3,9 +3,10 @@ import {Selectors} from "./Selectors";
 
 export const Settings = () => {
   return (
-    <div style={{display: 'flex'}}>
+    <div style={{display: 'flex', marginBottom: '10px'}}>
       <Selectors/>
-      <Calendar/>
+      <Calendar position={'start'}/>
+      <Calendar position={'end'}/>
     </div>
   )
 }

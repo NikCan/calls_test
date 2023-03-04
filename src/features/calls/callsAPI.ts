@@ -18,10 +18,17 @@ export const callsAPI = createApi({
         params,
       }),
     }),
+    getRecord: build.mutation<any, any>({
+      query: params => ({
+        url: 'getRecord',
+        method: 'POST',
+        params,
+      }),
+    }),
   }),
 })
 
-export const {useGetListMutation} = callsAPI
+export const {useGetListMutation, useGetRecordMutation} = callsAPI
 type RequestGetListType = {
   date_start?: string
   date_end?: string

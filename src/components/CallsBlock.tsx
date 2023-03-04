@@ -8,7 +8,7 @@ export const CallsBlock = () => {
   return (
     <Box
       component="main"
-      sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
+      sx={{flexGrow: 1, p: 5}}
     >
       <Toolbar/>
       <Settings/>

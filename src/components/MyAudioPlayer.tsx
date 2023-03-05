@@ -10,12 +10,12 @@ type Props = {
   }
 }
 export const MyAudioPlayer = ({dataForRequest}: Props) => {
-  const [getRecord, {data, isLoading}] = useGetRecordMutation()
+  const [getRecord, {data, isSuccess}] = useGetRecordMutation()
   useEffect(() => {
     getRecord(dataForRequest)
   }, [])
 
-  return !isLoading
+  return isSuccess
     ? <AudioPlayer display="timeline" containerHeight={'100%'} inline src={data}/>
     : <CircularProgress/>
 }

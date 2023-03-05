@@ -1,11 +1,11 @@
 import React, {MouseEvent, useState} from 'react';
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import {useCallsList} from "./hooks/use-calls-list";
-import CircularProgress from "@mui/material/CircularProgress";
 import CallReceivedIcon from "@mui/icons-material/CallReceived";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import {MyAudioPlayer} from "components/MyAudioPlayer";
 import avatar from 'assets/images/avatar.png'
+import LinearProgress from "@mui/material/LinearProgress";
 
 export const CallsList = () => {
   const {rows} = useCallsList()
@@ -32,7 +32,7 @@ export const CallsList = () => {
         return params.value.split(' ')[1]
       },
       headerName: 'Время',
-      flex: 2,
+      flex: 3,
     },
     {
       field: 'employee',
@@ -83,6 +83,6 @@ export const CallsList = () => {
         }}
       />
     </div>
-  ) : <CircularProgress/>
+  ) : <LinearProgress/>
 }
 

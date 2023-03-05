@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useSearch} from "./use-search";
 
 export const useCallsList = () => {
-  const [getList, {data, isLoading}] = useGetListMutation()
+  const [getList, {data}] = useGetListMutation()
   const {search, searchParams} = useSearch()
 
   const rows = data?.results.map((el: ListType) => {
@@ -25,8 +25,6 @@ export const useCallsList = () => {
   }, [searchParams])
 
   return {
-    rows,
-    isLoading,
-    getList,
+    rows
   }
 }

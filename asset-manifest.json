@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/crm_calls/static/css/main.e6c13ad2.css",
+    "main.js": "/crm_calls/static/js/main.20e23d48.js",
+    "static/js/787.273bbd90.chunk.js": "/crm_calls/static/js/787.273bbd90.chunk.js",
+    "static/media/header.png": "/crm_calls/static/media/header.6e89a14cebbb296ef07a.png",
+    "index.html": "/crm_calls/index.html",
+    "main.e6c13ad2.css.map": "/crm_calls/static/css/main.e6c13ad2.css.map",
+    "main.20e23d48.js.map": "/crm_calls/static/js/main.20e23d48.js.map",
+    "787.273bbd90.chunk.js.map": "/crm_calls/static/js/787.273bbd90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.20e23d48.js"
+  ]
+}

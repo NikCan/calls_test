@@ -1,6 +1,5 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
-
 export const callsAPI = createApi({
   reducerPath: 'calls/api',
   baseQuery: fetchBaseQuery({
@@ -18,23 +17,29 @@ export const callsAPI = createApi({
         params,
       }),
     }),
-    getRecord: build.mutation<any, any>({
+    getRecord: build.mutation<any, ReguestGetRecordType>({
       query: params => ({
         url: 'getRecord',
         method: 'POST',
         params,
+        responseHandler: async (response) => window.URL.createObjectURL(await response.blob()),
+        cache: "no-cache",
       }),
     }),
   }),
 })
 
 export const {useGetListMutation, useGetRecordMutation} = callsAPI
+
 type RequestGetListType = {
   date_start?: string
   date_end?: string
   in_out?: 1 | 0 | null
 }
-
+type ReguestGetRecordType = {
+  record: string
+  partnership_id: string
+}
 export type ListType = {
   id: any
   in_out: any
@@ -45,4 +50,6 @@ export type ListType = {
   source: any
   status: any
   time: any
+  record: string,
+  partnership_id: string
 }

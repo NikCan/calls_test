@@ -1,6 +1,5 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import headerImg from '../assets/images/header.png'
+import AppBar from '@mui/material/AppBar'
+import headerImg from 'assets/images/header.png'
 
 type Props = {
   drawerWidth: number

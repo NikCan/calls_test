@@ -1,6 +1,5 @@
 import {Action, configureStore, ThunkAction} from '@reduxjs/toolkit';
-import {callsAPI} from "../features/calls/callsAPI";
-
+import {callsAPI} from "features/calls/callsAPI";
 
 export const store = configureStore({
   reducer: {

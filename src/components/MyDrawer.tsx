@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -15,7 +14,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import LocalLibraryOutlinedIcon from '@mui/icons-material/LocalLibraryOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import skilla from '../assets/images/skilla.png'
+import skilla from 'assets/images/skilla.png'
 import Button from "@mui/material/Button";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';

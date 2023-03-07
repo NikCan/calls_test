@@ -6,7 +6,7 @@ import {useSearch} from "features/calls/hooks/use-search";
 
 export const Selectors = () => {
   const {setSearchParams, search} = useSearch()
-  const [value, setValue] = useState('all');
+  const [value, setValue] = useState<string>(search.in_out || 'all');
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value)

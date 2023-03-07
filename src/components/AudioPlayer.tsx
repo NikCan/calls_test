@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import AudioPlayer from "mui-audio-player-plus";
 import {useGetRecordMutation} from "features/calls/callsAPI";
 import CircularProgress from "@mui/material/CircularProgress";
 
@@ -9,13 +8,13 @@ type Props = {
     partnership_id: string
   }
 }
-export const MyAudioPlayer = ({dataForRequest}: Props) => {
+export const AudioPlayer = ({dataForRequest}: Props) => {
   const [getRecord, {data, isSuccess}] = useGetRecordMutation()
   useEffect(() => {
     getRecord(dataForRequest)
   }, [])
 
   return isSuccess
-    ? <AudioPlayer display="timeline" containerHeight={'100%'} inline src={data}/>
+    ? <audio controls src={data}/>
     : <CircularProgress/>
 }
